@@ -13,9 +13,9 @@
   --color-text-muted: #5a5a6e;
 
   /* Accent gradient */
-  --accent-1: #2596be;
-  --accent-2: #3aaad2;
-  --accent-3: #5ec2e6;
+  --accent-1: #e22828;
+  --accent-2: #ff4747;
+  --accent-3: #ff6b6b;
   --gradient-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
   --gradient-accent-text: linear-gradient(135deg, var(--accent-1), var(--accent-3));
 
@@ -1469,7 +1469,7 @@ footer {
    Selection Styling
    ======================================== */
 ::selection {
-  background: rgba(37, 150, 190, 0.3);
+  background: rgba(226, 40, 40, 0.3);
   color: white;
 }
 

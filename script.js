@@ -11,25 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
-// Ambient Glow — Follows Mouse
+// Ambient Glow — Follows Mouse (GPU-accelerated)
 // ========================================
 const glow = document.querySelector('.glow-1');
 
-let glowX = window.innerWidth - 300;
+let glowX = window.innerWidth - 200;
 let glowY = -150;
 let targetX = glowX;
 let targetY = glowY;
 
 document.addEventListener('mousemove', (e) => {
-  targetX = e.clientX - 300;
-  targetY = e.clientY - 300;
+  targetX = e.clientX - 200;
+  targetY = e.clientY - 200;
 });
 
 function animateGlow() {
-  glowX += (targetX - glowX) * 0.04;
-  glowY += (targetY - glowY) * 0.04;
-  glow.style.left = glowX + 'px';
-  glow.style.top = glowY + 'px';
+  glowX += (targetX - glowX) * 0.12;
+  glowY += (targetY - glowY) * 0.12;
+  glow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0)`;
   requestAnimationFrame(animateGlow);
 }
 
